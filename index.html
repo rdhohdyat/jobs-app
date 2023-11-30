@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- main container -->
+    <div class="w-[85%] m-auto bg-white">
+      <!-- navbar start -->
+      <nav class="flex justify-between items-center p-[3rem]">
+        <div class="logo-div">
+          <h1 class="logo text-[25px] text-sky-400">
+            <strong>Job</strong>Search
+          </h1>
+        </div>
+
+        <div class="menu">
+          <ul class="flex gap-8">
+            <li
+              class="menuList text-slate-500 hover:text-slate-600 cursor-pointer"
+            >
+              Jobs
+            </li>
+            <li
+              class="menuList text-slate-500 hover:text-slate-600 cursor-pointer"
+            >
+              Campanies
+            </li>
+            <li
+              class="menuList text-slate-500 hover:text-slate-600 cursor-pointer"
+            >
+              About
+            </li>
+            <li
+              class="menuList text-slate-500 hover:text-slate-600 cursor-pointer"
+            >
+              Blog
+            </li>
+            <li
+              class="menuList text-slate-500 hover:text-slate-600 cursor-pointer"
+            >
+              Login
+            </li>
+            <li
+              class="menuList text-slate-500 hover:text-slate-600 cursor-pointer"
+            >
+              Register
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- navbar end -->
+
+      <!-- searching div container -->
+      <div
+        class="SearchDiv grid gp-10 bg-gray-100 shadow-lg rounded-[10px] p-[3rem]"
+      >
+        <form action="">
+          <!-- search -->
+          <div
+            class="flex justify-between bg-white items-center rounded-[8px] gap-[10p] p-5 shadow-lg shadow-grey-700"
+          >
+            <div class="flex gap-2 items-center">
+              <i class="bx bx-search text-[25px] cursor-pointer"></i>
+              <input
+                type="text"
+                class="bg-transparant text-sky-500 focus:outline-none w-[100%]"
+                placeholder="Search Job Here..."
+              />
+              <i
+                class="bx bx-x-circle text-[30px] text-slate-400 hover:text-slate-600"
+              ></i>
+            </div>
+
+            <div class="flex gap-2 items-center">
+              <i class="bx bx-home text-[25px] cursor-pointer"></i>
+              <input
+                type="text"
+                class="bg-transparant text-sky-500 focus:outline-none w-[100%]"
+                placeholder="Search By Company..."
+              />
+              <i
+                class="bx bx-x-circle text-[30px] text-slate-400 hover:text-slate-600"
+              ></i>
+            </div>
+
+            <div class="flex gap-2 items-center">
+              <i class="bx bx-location-plus text-[25px] cursor-pointer"></i>
+              <input
+                type="text"
+                class="bg-transparant text-sky-500 focus:outline-none w-[100%]"
+                placeholder="Search By Location..."
+              />
+              <i
+                class="bx bx-x-circle text-[30px] text-slate-400 hover:text-slate-600"
+              ></i>
+            </div>
+
+            <button
+              class="bg-sky-500 h-full p-4 px-10 rounded-[10px] text-white cursor-pointer hover:bg-sky-400"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- end searching div -->
+
+        <div class="grid gp-10 bg-transparant rounded-[10px] pt-[3rem]">
+          <div class="flex items-center gap-10 justify-center">
+            <div class="flex items-center gap-2">
+              <label for="relevance" class="text-slate-500 font-semibold"
+                >Sort by:</label
+              >
+              <select
+                name=""
+                id="relevance"
+                class="rounded-[3px] px-4 py-1 bg-white"
+              >
+                <option value="">Relevance</option>
+                <option value="">Inclusive</option>
+                <option value="">Start With</option>
+                <option value="">Contains</option>
+              </select>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <label for="relevance" class="text-slate-500 font-semibold"
+                >Type:</label
+              >
+              <select
+                name=""
+                id="relevance"
+                class="rounded-[3px] px-4 py-1 bg-white"
+              >
+                <option value="">Full-time</option>
+                <option value="">Remote</option>
+                <option value="">Contract</option>
+                <option value="">Part-time</option>
+              </select>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <label for="relevance" class="text-slate-500 font-semibold"
+                >Level:</label
+              >
+              <select
+                name=""
+                id="relevance"
+                class="rounded-[3px] px-4 py-1 bg-white"
+              >
+                <option value="">Beginner</option>
+                <option value="">Senior</option>
+                <option value="">Intermediate</option>
+                <option value="">Advocate</option>
+              </select>
+            </div>
+
+            <span class="text-slate-500 font-semibold cursor-pointer"
+              >Clear All</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- job container -->
+      <div class="flex justify-center items-center">
+        <div
+          id="jobList"
+          class="flex gap-10 justify-center w-[85%] flex-wrap items-center py-10"
+        >
+          <!-- Daftar pekerjaan akan dimasukkan di sini -->
+        </div>
+      </div>
+      <!-- end job -->
+
+      <div class="mb-[4rem] mt-[4rem]">
+        <h1
+          class="text-slate-700 text-[23px] py-[2rem] pb-3rem font-bold w-[400px block]"
+        >
+          Ayo cari kerja dan <br />
+          berhentilah menganggur!
+        </h1>
+
+        <div class="flex justify-evenly items-center gap-10">
+          <div class="bg-white p-[2rem] rounded-[10px] shadow-md border">
+            <div class="flex items-center gap-5">
+              <img src="img/new-hire.png" alt="" class="w-[10%]" />
+              <h2 class="font-semibold">Team Work</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="bg-white p-[2rem] rounded-[10px] shadow-md border">
+            <div class="flex items-center gap-5">
+              <img src="img/onboarding.png" alt="" class="w-[10%]" />
+              <h2 class="font-semibold">Profesional</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="bg-white p-[2rem] rounded-[10px] shadow-md border">
+            <div class="flex items-center gap-5">
+              <img src="img/start-date.png" alt="" class="w-[10%]" />
+              <h2 class="font-semibold">On Time</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing .</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 mt-[6rem] flex justify-between gap-10 p-[3rem] rounded-[10px]"
+        >
+          <div>
+            <h1 class="text-2xl font-bold text-sky-500">
+              Siap untuk berhenti menganggur?
+            </h1>
+            <span class="font-bold text-black text-xl">Ayo mulai kerja!</span>
+          </div>
+
+          <button
+            class="bg-sky-400 rounded-[10px] p-[1rem] text-white border-[2px]"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="flex justify-around items-center gap-10 p-[3rem] bg-gradient-to-t from-transparent via-sky-300 to-sky-400 text-white"
+    >
+      <div>
+        <h1 class="font-bold text-xl mb-[1rem]">Ridho Hidayat</h1>
+        <p>Website ini dibuat atas kegabutan ridho hidayat kareana nganggur</p>
+        <p><strong>tailwindcss & JavaScript</strong></p>
+      </div>
+
+      <div>
+        <h1 class="font-bold text-lg mb-[1rem]">Social Media</h1>
+        <ul>
+          <li class="flex items-center gap-3 mb-2">
+            <img src="logo/facebook.png" alt="" class="w-[5%]" />
+            <a href="">Ridho Hidayat</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <img src="logo/instagram.png" alt="" class="w-[5%]" />
+            <a href="">rdho.hdyat</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h1 class="font-bold text-lg mb-[1rem]">Contact Info</h1>
+        <ul>
+          <li class="flex items-center gap-3 mb-2">
+            <img src="logo/whatsapp.png" alt="" class="w-[5%]" />
+            <a href="">0822-8749-8239</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <img src="logo/gmail.png" alt="" class="w-[5%]" />
+            <a href="">ridhohidayat973@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="bg-white text-center py-[3rem] font-bold text-slate-500">
+      © 2023 - Ridho Hidayat
+    </div>
+    <!-- end main container -->
+    <script src="jobs.js"></script>
+  </body>
+</html>
